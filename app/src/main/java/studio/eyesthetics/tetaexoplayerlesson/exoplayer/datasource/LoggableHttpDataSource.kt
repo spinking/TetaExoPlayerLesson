@@ -7,17 +7,17 @@ import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
 
 class LoggableHttpDataSource : DefaultHttpDataSource() {
     override fun read(buffer: ByteArray, offset: Int, length: Int): Int {
-        Log.d(TAG, "read: ")
+        Log.d(TAG, "$TAG.read: ")
         return super.read(buffer, offset, length)
     }
 
     override fun open(dataSpec: DataSpec): Long {
-        Log.d(TAG, "open: ")
+        Log.d(TAG, "$TAG.open: ")
         return super.open(dataSpec)
     }
 
     override fun close() {
-        Log.d(TAG, "close: ")
+        Log.d(TAG, "$TAG.close: ")
         super.close()
     }
 
